@@ -16,16 +16,21 @@ public:
     void run();
 
 private:
-    vector<Platform> platforms;
-
-    // draw platforms
-    void drawPlatforms(RenderWindow &window);
-
+    // config
     const int WINDOW_WIDTH = 800;
     const int WINDOW_HEIGHT = 600;
 
+    // platforms
+    vector<Platform> platforms;
+
     // player class
     Player player;
+
+    // methods
+    void checkCollision();
+
+    // Collision
+    FloatRect nextPos;
 };
 
 

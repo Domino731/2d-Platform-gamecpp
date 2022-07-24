@@ -27,10 +27,10 @@ public:
 
     void movePlayer();
 
-private:
-    const float movementSpeed = 2.f;
-    Vector2f velocity{5.f, 5.f};
     RectangleShape player;
+    Vector2f velocity{5.f, 5.f};
+    const float movementSpeed = 2.f;
+private:
 
     void draw(RenderTarget &target, RenderStates state) const override;
 };

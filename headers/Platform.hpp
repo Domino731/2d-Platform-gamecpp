@@ -21,9 +21,8 @@ public:
 
     float right();
 
-private:
     sf::RectangleShape shape;
-
+private:
     float const shapeWidth{200.0f};
     float const shapeHeight{30.0f};
     float const player_velocity{6.0f};
