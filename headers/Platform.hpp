@@ -13,14 +13,6 @@ class Platform : public Drawable {
 public:
     Platform();
 
-    float top();
-
-    float bot();
-
-    float left();
-
-    float right();
-
     sf::RectangleShape shape;
 private:
     float const shapeWidth{200.0f};

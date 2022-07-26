@@ -59,6 +59,7 @@ void Engine::checkCollision() {
                     ) {
                 player.velocity.y = 0.f;
                 player.player.setPosition(playerBounds.left, wallBounds.top - playerBounds.height);
+                player.resetJump();
             }
 
                 //Top collision
@@ -69,6 +70,7 @@ void Engine::checkCollision() {
                     ) {
                 player.velocity.y = 0.f;
                 player.player.setPosition(playerBounds.left, wallBounds.top + wallBounds.height);
+                player.resetJump();
             }
 
             //Right collision
@@ -79,6 +81,7 @@ void Engine::checkCollision() {
                     ) {
                 player.velocity.x = 0.f;
                 player.player.setPosition(wallBounds.left - playerBounds.width, playerBounds.top);
+                player.resetJump();
             }
 
                 //Left collision
@@ -89,6 +92,7 @@ void Engine::checkCollision() {
                     ) {
                 player.velocity.x = 0.f;
                 player.player.setPosition(wallBounds.left + wallBounds.width, playerBounds.top);
+                player.resetJump();
             }
         }
     }

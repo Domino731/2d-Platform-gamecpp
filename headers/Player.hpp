@@ -29,6 +29,8 @@ public:
 
     void gravity();
 
+    void resetJump();
+
     RectangleShape player;
     Vector2f velocity{5.f, 5.f};
     const float movementSpeed = 2.f;
@@ -36,12 +38,9 @@ public:
 
     bool isJumping = false;
     bool isFalling = false;
-    int const jumpHeight = 100;
-    int currentJumpHeight = 0;
-
-    int jumpStartY = 0;
+    int const jumpHeight = 200;
     int jumpEndY = 0;
-    int jumpY = 0;
+
 
     float gravityValue = 1.f;
     float ground = 550.f;

@@ -29,9 +29,7 @@ void Player::changeVelocity() {
         if (Keyboard::isKeyPressed(Keyboard::Space)) {
             cout << "TEST" << endl;
             isJumping = true;
-            jumpStartY = (int) player.getPosition().y;
             jumpEndY = (int) player.getPosition().y - jumpHeight;
-            jumpY = (int) player.getPosition().y + 1;
         }
     }
 
@@ -58,8 +56,7 @@ void Player::movePlayer() {
     if (isFalling && ground != player.getPosition().y) {
         player.move(0, gravityValue);
     } else if (isFalling && ground == player.getPosition().y) {
-        isJumping = false;
-        isFalling = false;
+        resetJump();
     }
 
     if (Keyboard::isKeyPressed(Keyboard::A)) {
@@ -74,4 +71,10 @@ void Player::gravity() {
     if (!isJumping && !isFalling && ground != player.getPosition().y) {
         player.move(0, gravityValue);
     }
+}
+
+void Player::resetJump() {
+    isJumping = false;
+    isFalling = false;
+    jumpEndY = 0;
 }
