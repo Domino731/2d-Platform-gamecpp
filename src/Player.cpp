@@ -24,7 +24,6 @@ void Player::draw(RenderTarget &target, RenderStates state) const {
 }
 
 void Player::changeVelocity() {
-    // jump
     if (!isJumping && !isFalling) {
         if (Keyboard::isKeyPressed(Keyboard::Space)) {
             isJumping = true;
@@ -48,6 +47,7 @@ void Player::movePlayer() {
             player.move(0, -jumpSpeed);
         } else {
             isJumping = false;
+            isFalling = true;
         }
     }
 
@@ -67,13 +67,12 @@ void Player::movePlayer() {
 }
 
 void Player::gravity() {
-    if (!isJumping && player.getPosition().y != ground) {
+    if (player.getPosition().y <= 550.f)
         player.move(0, gravityValue);
-    }
+    else
+        isFalling = false;
 }
 
 void Player::resetJump() {
-//    isJumping = false;
-//    isFalling = false;
-//    jumpEndY = 0;
+    isFalling = false;
 }

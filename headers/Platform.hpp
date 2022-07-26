@@ -11,7 +11,7 @@ using namespace sf;
 
 class Platform : public Drawable {
 public:
-    Platform();
+    Platform(float pX, float pY);
 
     sf::RectangleShape shape;
 private:

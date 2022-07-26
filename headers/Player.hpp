@@ -34,7 +34,7 @@ public:
     RectangleShape player;
     Vector2f velocity{5.f, 5.f};
     const float movementSpeed = 2.f;
-    const float jumpSpeed = 1.f;
+    const float jumpSpeed = 6.f;
 
     bool isJumping = false;
     bool isFalling = false;
@@ -43,7 +43,7 @@ public:
     int jumpEndY = 0;
 
 
-    float gravityValue = 1.f;
+    float gravityValue = 1.5f;
     float ground = 550.f;
 private:
 

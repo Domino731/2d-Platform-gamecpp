@@ -10,7 +10,8 @@ using namespace sf;
 #include "Platform.hpp"
 
 Engine::Engine() {
-    platforms.emplace_back();
+    platforms.emplace_back(200, 400);
+    platforms.emplace_back(400, 500);
 };
 
 void Engine::run() {
@@ -42,6 +43,9 @@ void Engine::run() {
 }
 
 void Engine::checkCollision() {
+
+    bool isIntersecting = true;
+
     for (auto &platform: platforms) {
         FloatRect playerBounds = player.player.getGlobalBounds();
         FloatRect wallBounds = platform.shape.getGlobalBounds();
@@ -60,8 +64,7 @@ void Engine::checkCollision() {
                     ) {
                 player.velocity.y = 0.f;
                 player.player.setPosition(playerBounds.left, wallBounds.top - playerBounds.height);
-                player.ground = platform.shape.getPosition().y + 50;
-                player.isFalling = false;
+                player.resetJump();
             }
 
                 //Top collision
@@ -73,6 +76,7 @@ void Engine::checkCollision() {
                 player.velocity.y = 0.f;
                 player.player.setPosition(playerBounds.left, wallBounds.top + wallBounds.height);
                 player.resetJump();
+                player.isJumping = false;
             }
 
             //Right collision
@@ -83,7 +87,6 @@ void Engine::checkCollision() {
                     ) {
                 player.velocity.x = 0.f;
                 player.player.setPosition(wallBounds.left - playerBounds.width, playerBounds.top);
-                player.resetJump();
             }
 
                 //Left collision
@@ -92,21 +95,9 @@ void Engine::checkCollision() {
                      && playerBounds.top < wallBounds.top + wallBounds.height
                      && playerBounds.top + playerBounds.height > wallBounds.top
                     ) {
-                cout << "Right collision" << endl;
                 player.velocity.x = 0.f;
                 player.player.setPosition(wallBounds.left + wallBounds.width, playerBounds.top);
-                player.resetJump();
             }
         }
-
-        // handling gravity
-        float newGround = WINDOW_HEIGHT - player.player.getSize().x;
-        if (!wallBounds.intersects(nextPos) && newGround != player.ground && !player.isFalling) {
-            player.ground = WINDOW_HEIGHT - player.player.getSize().x;
-            player.isFalling = true;
-        }
-
-
-        cout << wallBounds.intersects(nextPos) << endl;
     }
 }
