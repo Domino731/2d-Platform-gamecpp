@@ -38,6 +38,7 @@ public:
 
     bool isJumping = false;
     bool isFalling = false;
+    bool isFalling2 = false;
     int const jumpHeight = 200;
     int jumpEndY = 0;
 

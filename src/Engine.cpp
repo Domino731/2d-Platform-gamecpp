@@ -50,6 +50,7 @@ void Engine::checkCollision() {
         nextPos.left += player.velocity.x;
         nextPos.top += player.velocity.y;
 
+
         if (wallBounds.intersects(nextPos)) {
             //Bottom collision
             if (playerBounds.top < wallBounds.top
@@ -59,7 +60,8 @@ void Engine::checkCollision() {
                     ) {
                 player.velocity.y = 0.f;
                 player.player.setPosition(playerBounds.left, wallBounds.top - playerBounds.height);
-                player.resetJump();
+                player.ground = platform.shape.getPosition().y + 50;
+                player.isFalling = false;
             }
 
                 //Top collision
@@ -90,10 +92,21 @@ void Engine::checkCollision() {
                      && playerBounds.top < wallBounds.top + wallBounds.height
                      && playerBounds.top + playerBounds.height > wallBounds.top
                     ) {
+                cout << "Right collision" << endl;
                 player.velocity.x = 0.f;
                 player.player.setPosition(wallBounds.left + wallBounds.width, playerBounds.top);
                 player.resetJump();
             }
         }
+
+        // handling gravity
+        float newGround = WINDOW_HEIGHT - player.player.getSize().x;
+        if (!wallBounds.intersects(nextPos) && newGround != player.ground && !player.isFalling) {
+            player.ground = WINDOW_HEIGHT - player.player.getSize().x;
+            player.isFalling = true;
+        }
+
+
+        cout << wallBounds.intersects(nextPos) << endl;
     }
 }
