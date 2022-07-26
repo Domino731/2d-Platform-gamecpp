@@ -30,6 +30,7 @@ void Engine::run() {
         checkCollision();
 
         player.movePlayer();
+        player.gravity();
 
         window.draw(player);
         for (auto &platform: platforms) {

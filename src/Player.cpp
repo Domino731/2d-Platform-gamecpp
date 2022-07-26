@@ -3,6 +3,9 @@
 //
 #include <iostream>
 #include "Player.hpp"
+#include <math.h>
+
+using namespace std;
 
 Player::Player() {
     direction = "NONE";
@@ -13,6 +16,7 @@ Player::Player() {
     colBot = false;
     player.setFillColor(Color::Green);
     player.setSize(Vector2f(50.f, 50.f));
+    player.setPosition(0, 550.f);
 }
 
 void Player::draw(RenderTarget &target, RenderStates state) const {
@@ -20,12 +24,19 @@ void Player::draw(RenderTarget &target, RenderStates state) const {
 }
 
 void Player::changeVelocity() {
-    if (Keyboard::isKeyPressed(Keyboard::W)) {
-        velocity.y = -movementSpeed;
+    // jump
+    if (!isJumping && !isFalling) {
+        if (Keyboard::isKeyPressed(Keyboard::Space)) {
+            cout << "TEST" << endl;
+            isJumping = true;
+            jumpStartY = (int) player.getPosition().y;
+            jumpEndY = (int) player.getPosition().y - jumpHeight;
+            jumpY = (int) player.getPosition().y + 1;
+        }
     }
-    if (Keyboard::isKeyPressed(Keyboard::S)) {
-        velocity.y = movementSpeed;
-    }
+
+
+    // x vector change
     if (Keyboard::isKeyPressed(Keyboard::A)) {
         velocity.x = -movementSpeed;
     }
@@ -35,16 +46,32 @@ void Player::changeVelocity() {
 }
 
 void Player::movePlayer() {
-    if (Keyboard::isKeyPressed(Keyboard::W)) {
-        player.move(0, velocity.y);
+    if (isJumping) {
+        if (player.getPosition().y >= jumpEndY) {
+            player.move(0, -jumpSpeed);
+        } else {
+            isJumping = false;
+            isFalling = true;
+        }
     }
-    if (Keyboard::isKeyPressed(Keyboard::S)) {
-        player.move(0, velocity.y);
+
+    if (isFalling && ground != player.getPosition().y) {
+        player.move(0, gravityValue);
+    } else if (isFalling && ground == player.getPosition().y) {
+        isJumping = false;
+        isFalling = false;
     }
+
     if (Keyboard::isKeyPressed(Keyboard::A)) {
         player.move(velocity.x, 0);
     }
     if (Keyboard::isKeyPressed(Keyboard::D)) {
         player.move(velocity.x, 0);
+    }
+}
+
+void Player::gravity() {
+    if (!isJumping && !isFalling && ground != player.getPosition().y) {
+        player.move(0, gravityValue);
     }
 }

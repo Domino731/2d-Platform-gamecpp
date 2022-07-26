@@ -27,9 +27,24 @@ public:
 
     void movePlayer();
 
+    void gravity();
+
     RectangleShape player;
     Vector2f velocity{5.f, 5.f};
     const float movementSpeed = 2.f;
+    const float jumpSpeed = 1.f;
+
+    bool isJumping = false;
+    bool isFalling = false;
+    int const jumpHeight = 100;
+    int currentJumpHeight = 0;
+
+    int jumpStartY = 0;
+    int jumpEndY = 0;
+    int jumpY = 0;
+
+    float gravityValue = 1.f;
+    float ground = 550.f;
 private:
 
     void draw(RenderTarget &target, RenderStates state) const override;
