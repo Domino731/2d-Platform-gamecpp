@@ -1,22 +1,28 @@
-//
-// Created by Dominik on 19.07.2022.
-//
-#include <iostream>
 #include "Player.hpp"
-#include <math.h>
+#include <SFML/Graphics.hpp>
 
 using namespace std;
+using namespace sf;
 
 Player::Player() {
     direction = "NONE";
     collisionDirection = "NONE";
+
     colLeft = false;
     colRight = false;
     colTop = false;
     colBot = false;
-    player.setFillColor(Color::Green);
+
     player.setSize(Vector2f(50.f, 50.f));
     player.setPosition(0, 550.f);
+
+    texture.loadFromFile("../sprite.png");
+    player.setTexture(&texture);
+
+    textureSizeY = texture.getSize().y / 13;
+    textureSizeX = texture.getSize().x / 4;
+
+    player.setTextureRect(IntRect(1, 31, texture.getSize().x / 4, texture.getSize().y / 13));
 }
 
 void Player::draw(RenderTarget &target, RenderStates state) const {
@@ -30,8 +36,6 @@ void Player::changeVelocity() {
             jumpEndY = (int) player.getPosition().y - jumpHeight;
         }
     }
-
-
     // x vector change
     if (Keyboard::isKeyPressed(Keyboard::A)) {
         velocity.x = -movementSpeed;
@@ -50,13 +54,6 @@ void Player::movePlayer() {
             isFalling = true;
         }
     }
-
-//    if (isFalling && ground != player.getPosition().y) {
-//        player.move(0, gravityValue);
-//        cout << "ground" << ground << endl;
-//    } else if (isFalling && ground == player.getPosition().y) {
-//        resetJump();
-//    }
     gravity();
     if (Keyboard::isKeyPressed(Keyboard::A)) {
         player.move(velocity.x, 0);

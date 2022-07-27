@@ -3,7 +3,7 @@ project(nibbles_01)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(nibbles_01 src/main.cpp src/Engine.cpp headers/Engine.hpp src/Player.cpp headers/Player.hpp src/Platform.cpp headers/Platform.hpp)
+add_executable(nibbles_01 src/main.cpp src/Engine.cpp headers/Engine.hpp src/Player.cpp headers/Player.hpp src/Platform.cpp headers/Platform.hpp sprite.png)
 
 include_directories(headers /usr/include C:/SFML/include)
 

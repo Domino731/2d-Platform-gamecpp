@@ -95,6 +95,9 @@
 		<Unit filename="C:/Users/Dominik/Desktop/2d-Platform-gamecpp/headers/Player.hpp">
 			<Option target="nibbles_01"/>
 		</Unit>
+		<Unit filename="C:/Users/Dominik/Desktop/2d-Platform-gamecpp/sprite.png">
+			<Option target="nibbles_01"/>
+		</Unit>
 		<Unit filename="C:/Users/Dominik/Desktop/2d-Platform-gamecpp/src/Engine.cpp">
 			<Option target="nibbles_01"/>
 		</Unit>

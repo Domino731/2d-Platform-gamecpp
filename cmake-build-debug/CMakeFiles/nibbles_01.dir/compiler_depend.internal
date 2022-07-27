@@ -489,13 +489,21 @@ CMakeFiles/nibbles_01.dir/src/Platform.cpp.obj
 
 CMakeFiles/nibbles_01.dir/src/Player.cpp.obj
  C:/Users/Dominik/Desktop/2d-Platform-gamecpp/src/Player.cpp
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h
+ C:/Users/Dominik/Desktop/2d-Platform-gamecpp/headers/Player.hpp
+ C:/SFML/include/SFML/Graphics.hpp
+ C:/SFML/include/SFML/Window.hpp
+ C:/SFML/include/SFML/System.hpp
+ C:/SFML/include/SFML/Config.hpp
+ C:/SFML/include/SFML/System/Clock.hpp
+ C:/SFML/include/SFML/System/Export.hpp
+ C:/SFML/include/SFML/System/Time.hpp
+ C:/SFML/include/SFML/System/Err.hpp
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ostream
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ios
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iosfwd
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stringfwd.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/memoryfwd.h
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/postypes.h
@@ -606,17 +614,6 @@ CMakeFiles/nibbles_01.dir/src/Player.cpp.obj
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/locale_facets.tcc
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_ios.tcc
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc
- C:/Users/Dominik/Desktop/2d-Platform-gamecpp/headers/Player.hpp
- C:/SFML/include/SFML/Graphics.hpp
- C:/SFML/include/SFML/Window.hpp
- C:/SFML/include/SFML/System.hpp
- C:/SFML/include/SFML/Config.hpp
- C:/SFML/include/SFML/System/Clock.hpp
- C:/SFML/include/SFML/System/Export.hpp
- C:/SFML/include/SFML/System/Time.hpp
- C:/SFML/include/SFML/System/Err.hpp
  C:/SFML/include/SFML/System/FileInputStream.hpp
  C:/SFML/include/SFML/System/InputStream.hpp
  C:/SFML/include/SFML/System/NonCopyable.hpp
@@ -658,6 +655,8 @@ CMakeFiles/nibbles_01.dir/src/Player.cpp.obj
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/invoke.h
  C:/SFML/include/SFML/System/Utf.inl
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iterator
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream
+ C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stream_iterator.h
  C:/SFML/include/SFML/System/String.inl
  C:/SFML/include/SFML/System/Thread.hpp
@@ -728,23 +727,6 @@ CMakeFiles/nibbles_01.dir/src/Player.cpp.obj
  C:/SFML/include/SFML/Graphics/Sprite.hpp
  C:/SFML/include/SFML/Graphics/Text.hpp
  C:/SFML/include/SFML/Graphics/VertexBuffer.hpp
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/math.h
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath
- C:/mingw64/x86_64-w64-mingw32/include/math.h
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/specfun.h
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/gamma.tcc
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/special_function_util.h
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/bessel_function.tcc
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/special_function_util.h
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/beta_function.tcc
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/ell_integral.tcc
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/exp_integral.tcc
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/hypergeometric.tcc
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/legendre_function.tcc
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/modified_bessel_func.tcc
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/poly_hermite.tcc
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/poly_laguerre.tcc
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1/riemann_zeta.tcc
 
 CMakeFiles/nibbles_01.dir/src/main.cpp.obj
  C:/Users/Dominik/Desktop/2d-Platform-gamecpp/src/main.cpp

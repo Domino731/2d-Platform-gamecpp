@@ -163,6 +163,13 @@
 				4,
 				6
 			]
+		},
+		{
+			"name" : "Resources",
+			"sourceIndexes" : 
+			[
+				7
+			]
 		}
 	],
 	"sources" : 
@@ -205,6 +212,11 @@
 			"backtrace" : 1,
 			"path" : "headers/Platform.hpp",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "sprite.png",
+			"sourceGroupIndex" : 2
 		}
 	],
 	"type" : "EXECUTABLE"

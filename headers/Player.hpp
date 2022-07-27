@@ -32,6 +32,7 @@ public:
     void resetJump();
 
     RectangleShape player;
+    Texture texture;
     Vector2f velocity{5.f, 5.f};
     const float movementSpeed = 2.f;
     const float jumpSpeed = 6.f;
@@ -46,6 +47,9 @@ public:
     float gravityValue = 1.5f;
     float ground = 550.f;
 private:
+    sf::Vector2u textureSize = texture.getSize();
+    float textureSizeY;
+    float textureSizeX;
 
     void draw(RenderTarget &target, RenderStates state) const override;
 };
