@@ -15,14 +15,7 @@ Player::Player() {
 
     player.setSize(Vector2f(50.f, 50.f));
     player.setPosition(0, 550.f);
-
-    texture.loadFromFile("../sprite.png");
-    player.setTexture(&texture);
-
-    textureSizeY = texture.getSize().y / 13;
-    textureSizeX = texture.getSize().x / 4;
-
-    player.setTextureRect(IntRect(1, 31, texture.getSize().x / 4, texture.getSize().y / 13));
+    player.setFillColor(Color::Blue);
 }
 
 void Player::draw(RenderTarget &target, RenderStates state) const {

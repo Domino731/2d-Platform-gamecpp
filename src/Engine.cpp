@@ -1,17 +1,18 @@
 #include <SFML/Graphics.hpp>
-#include <iostream>
-#include <vector>
-#include "Platform.hpp"
 
 using namespace std;
 using namespace sf;
 
 #include "Engine.hpp"
-#include "Platform.hpp"
 
 Engine::Engine() {
-    platforms.emplace_back(200, 400);
-    platforms.emplace_back(400, 500);
+    platforms.emplace_back(100, 100);
+    platforms.emplace_back(100, 400);
+    platforms.emplace_back(200, 500);
+    platforms.emplace_back(300, 300);
+    platforms.emplace_back(400, 200);
+    platforms.emplace_back(500, 600);
+    platforms.emplace_back(600, 400);
 };
 
 void Engine::run() {
@@ -23,8 +24,8 @@ void Engine::run() {
         window.pollEvent(e);
         window.clear();
 
-//        if (e.type == sf::Event::Closed)
-//            window.close();
+        if (e.type == sf::Event::Closed)
+            window.close();
 
         player.changeVelocity();
 

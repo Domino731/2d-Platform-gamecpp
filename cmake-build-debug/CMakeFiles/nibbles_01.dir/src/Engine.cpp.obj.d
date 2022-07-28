@@ -234,8 +234,6 @@ CMakeFiles/nibbles_01.dir/src/Engine.cpp.obj: \
  C:/SFML/include/SFML/Graphics/Sprite.hpp \
  C:/SFML/include/SFML/Graphics/Text.hpp \
  C:/SFML/include/SFML/Graphics/VertexBuffer.hpp \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream \
- C:/Users/Dominik/Desktop/2d-Platform-gamecpp/headers/Platform.hpp \
  C:/Users/Dominik/Desktop/2d-Platform-gamecpp/headers/Engine.hpp \
  C:/Users/Dominik/Desktop/2d-Platform-gamecpp/headers/Player.hpp \
  C:/Users/Dominik/Desktop/2d-Platform-gamecpp/headers/Platform.hpp

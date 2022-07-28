@@ -1,6 +1,3 @@
-//
-// Created by Dominik on 19.07.2022.
-//
 #include <SFML/Graphics.hpp>
 
 using namespace sf;
@@ -40,17 +37,13 @@ public:
     bool isJumping = false;
     bool isFalling = false;
     bool isFalling2 = false;
-    int const jumpHeight = 200;
+    int const jumpHeight = 150;
     int jumpEndY = 0;
 
 
     float gravityValue = 1.5f;
     float ground = 550.f;
 private:
-    sf::Vector2u textureSize = texture.getSize();
-    float textureSizeY;
-    float textureSizeX;
-
     void draw(RenderTarget &target, RenderStates state) const override;
 };
 
